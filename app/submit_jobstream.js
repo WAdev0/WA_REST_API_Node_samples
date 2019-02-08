@@ -8,7 +8,6 @@
 var rp = require('request-promise-native');
 var fs = require('fs');
 var ini = require('ini');
-var args = require('cli.args')('d:');
 
 /*
  * Customizable variables
@@ -20,6 +19,7 @@ var variables = [
   { key: 'URL', value: 'http://httpbin.org/post' },
   { key: 'BODY', value: 'mydata' }
 ];
+/* End of Customizable variables */
 
 
 var iatime = Date.now();
@@ -60,7 +60,7 @@ function makeandsubmit(js) {
     inputArrivalTime: new Date(iatime),
   };
 
-  console.log('make parameters: ' + JSON.stringify(subinfo));
+//  console.log('make parameters: ' + JSON.stringify(subinfo));
   rp.post(url + '/twsd/plan/current/jobstream/' + js.id + '/action/make_jobstream',
     {
       json: subinfo,
@@ -68,7 +68,7 @@ function makeandsubmit(js) {
     }
   ).then((body) => {
     console.log('Make successful');
-    console.log(body);
+//    console.log(body);
     submit(body);
   }).catch((err) => {
     console.log('Make Error: ' + err);
@@ -86,7 +86,7 @@ function submit(jsi) {
     variableTable: variables
   };
 
-  console.log('submit parameters: ' + JSON.stringify(subinfo));
+//  console.log('submit parameters: ' + JSON.stringify(subinfo));
   rp.post(url + '/twsd/plan/current/jobstream/action/submit_jobstream',
     {
       json: subinfo,
