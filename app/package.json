@@ -1,0 +1,19 @@
+{
+  "name": "workload-automation-client-sample",
+  "version": "0.0.1",
+  "description": "A sample client in node.js to call IBM/HCL Workload Automation REST APIs",
+  "scripts": {
+    "submit_jobstream": "node submit_jobstream.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "ini": "^1.3.5",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.13.0"
+  }
+}
