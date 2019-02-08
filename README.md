@@ -8,7 +8,7 @@ To run the sample:
 2. Initialize the libraries running `npm install`
 2. Customize the sample code based on your needs, the most common variables are after *Customizable variables* comment
 
-####[Submit jobstream in plan](https://github.com/WAdev0/WA_REST_API_Node_samples/blob/master/app/submit_jobstream.js)
+## [Submit jobstream in plan](https://github.com/WAdev0/WA_REST_API_Node_samples/blob/master/app/submit_jobstream.js)
 
 This sample submits a jobstream, passing some variables and setting a time dependency some minutes after the submission time. The sample is based on the workload definitions contained in SIMPLEREST.zip workload application.
 To run the script run: `npm run submit_jobstream`
